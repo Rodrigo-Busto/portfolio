@@ -1,22 +1,33 @@
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import { Nav } from "react-bootstrap";
+import { CenteredNavBar, NavContent, NavLink, NavBrand } from "./styles";
+import { TransparentButton } from "../../modules";
+// import Image from "next/image";
+import Image from "react-bootstrap/Image";
+
+
 
 const HomeNavbar = () => {
     return (
         <>
-            <Container>
-                <Navbar bg="ligth">
-                    <Container>
-                        <Navbar.Brand>Brand</Navbar.Brand>
-                        <Nav>
-                            <Nav.Link>Projetos</Nav.Link>
-                            <Nav.Link>Sobre</Nav.Link>
-                            <Nav.Link>Não sei</Nav.Link>
-                        </Nav>
-                    </Container>
-                </Navbar>
-            </Container>
+            <CenteredNavBar>
+                <NavBrand>
+                    <Image src="/Logo.png" fluid alt="Brand Logo"/>
+                </NavBrand>
+                <NavContent>
+                    <NavLink>
+                        <TransparentButton width="100%" height="100%">Projetos</TransparentButton>
+                    </NavLink>
+                    <NavLink>
+                        <TransparentButton width="100%" height="100%">
+                            Sobre
+                        </TransparentButton>
+                    </NavLink>
+                    <NavLink>
+                        <TransparentButton width="100%" height="100%">
+                            Não sei
+                        </TransparentButton>
+                    </NavLink>
+                </NavContent>
+            </CenteredNavBar>
         </>
     );
 }

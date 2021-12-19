@@ -1,9 +1,14 @@
-export const TransparentButton = () => {
+import { Props } from "./types";
+import { StyledButton, StyledDiv } from "./styles";
+
+export const TransparentButton = (props: Props) => {
     return (
         <>
-            <div>
-                Hello World
-            </div>
+            <StyledDiv width={props.width} height={props.height}>
+                <StyledButton type="button">
+                    {props.children}
+                </StyledButton>
+            </StyledDiv>
         </>
     );
 }

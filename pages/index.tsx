@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import { HomeNavbar } from '../components';
-import { TransparentButton } from '../modules'
 
 const Home: NextPage = () => {
   return (
@@ -8,9 +7,6 @@ const Home: NextPage = () => {
       <header>
         <HomeNavbar/>
       </header>
-      <body>
-        <TransparentButton/>
-      </body>
     </>
   )
 }
